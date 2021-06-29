@@ -75,17 +75,51 @@ function catAndMouse(mouse, cat1, cat2) {
 // console.log(catAndMouse(1, 2, 3))
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] % 3 === 0 && array[index] % 5 !== 0) {
+      array[index] = 'fizz';
+    } else if (array[index] % 3 !== 0 && array[index] % 5 == 0) {
+      array[index] = 'buzz';
+    } else if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      array[index] = 'fizzbuzz';
+    } else {
+      array[index] = 'bug!';
+    }
+  }
+  return array;
 }
+// console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+
+  //https://www.w3schools.com/jsref/jsref_replace.asp
+  //Substituir cada uma dos elementos selecionados ("g" pega todas dentro da string e "i" considera case sensive) por outro.
+
+function encode(string) {
+
+  let enc = '';
+  enc = string.replace(/a/gi, 1);
+  enc = enc.replace(/e/gi, "2");
+  enc = enc.replace(/i/gi, "3");
+  enc = enc.replace(/o/gi, "4");
+  enc = enc.replace(/u/gi, "5");
+  return enc;
 }
-function decode() {
-  // seu código aqui
+// console.log(encode('hi there!'))
+
+function decode(string) {
+
+  let dec = '';
+  dec = string.replace(/1/gi, "a");
+  dec = dec.replace(/2/gi, "e");
+  dec = dec.replace(/3/gi, "i");
+  dec = dec.replace(/4/gi, "o");
+  dec = dec.replace(/5/gi, "u");
+  return dec;
+  
 }
+// console.log(decode('h3 th2r2!'))
 
 module.exports = {
   calcArea,
