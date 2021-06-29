@@ -3,23 +3,14 @@ function techList(arrayTech, name) {
   
   //Ordenar o array final em ordem alfabética
   arrayTech.sort();
-
-  //Setar array para conter as informações
-  let array = [];
-
-  //Acessar as chaves do array das "tecnologias" informado
-  for (let index in arrayTech) {
-    //Inserir informações nesta chave 
-    array.push({
-    //Informações inseridas
-          //Informações do array informado
-    tech: arrayTech[index],
-          //Informações do nome solicitado
-    name: name,
+  let array = [];//Setar array para conter as informações
+  for (let index in arrayTech) {//Acessar as chaves do array das "tecnologias" informado
+    array.push({//Inserir informações nesta chave
+    tech: arrayTech[index],//Informações do array informado
+    name: name,//Informações do nome solicitado
     });
   };
-  //Condicional se vazio
-  if (array == 0) {
+  if (array === 0) { //Condicional se vazio
     return 'Vazio!';
   } else {
     //Condicional de não vazio
