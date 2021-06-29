@@ -32,14 +32,33 @@ function concatName(array) {
 // console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let result = wins * 3 + ties;
+  return result;
 }
+// console.log(footballPoints(14, 8))
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+
+  //Verificar o maior número dentro do array e armazenar essa informação
+  let higherNumber = array[0];
+  for (let i = 1; i < array.length; i += 1) {
+    if (array[i] > higherNumber) {
+      higherNumber = array[i];
+    }
+  }
+
+  //Contador para ver quantas vezes o número armazenado anteriormente se repete
+  let counter = 0;
+  for (let i = 0; i < array.length; i += 1) {
+    if (higherNumber == array[i]) {
+      counter += 1;
+    }
+  }
+  return counter;
 }
+// console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse() {
