@@ -1,29 +1,32 @@
 // Desafio 10
 function techList(arrayTech, name) {
   
-  //Setar array para conter as informações
-  let array = [];
-  
-  //Após o reOrdenar o array final, após o retorno da função, em ordem alfabética
+  //Ordenar o array final em ordem alfabética
   arrayTech.sort();
 
-  //Acessar as chaves do array de tecnologias informado
+  //Setar array para conter as informações
+  let array = [];
+
+  //Acessar as chaves do array das "tecnologias" informado
   for (let index in arrayTech) {
     //Inserir informações nesta chave 
     array.push({
     //Informações inseridas
+          //Informações do array informado
     tech: arrayTech[index],
+          //Informações do nome solicitado
     name: name,
     });
   };
-  //Condicional se vazio ou não
+  //Condicional se vazio
   if (array == 0) {
     return 'Vazio!';
   } else {
+    //Condicional de não vazio
     return array;
   };
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Kristiano'));
+// console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Kristiano'));
 
 // Desafio 11
 function generatePhoneNumber() {
