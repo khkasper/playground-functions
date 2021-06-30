@@ -51,8 +51,10 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let c1M = cat1 - mouse;
-  let c2M = cat2 - mouse;
+  // https://stackoverflow.com/questions/4652104/convert-a-negative-number-to-a-positive-one-in-javascript
+  // Para evitar resultados negativos dentro das condições, será usado Math.abs()
+  let c1M = Math.abs(cat1 - mouse);
+  let c2M = Math.abs(cat2 - mouse);
   if (c2M > c1M) {
     return 'cat1';
   }
@@ -60,10 +62,10 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   }
   if (c1M === c2M) {
-    return 'os gatos trombaram e o rato foge';
+    return 'os gatos trombam e o rato foge';
   }
 }
-// console.log(catAndMouse(1, 2, 3))
+// console.log(catAndMouse(-1, 0, -3))
 
 // Desafio 8
 function fizzBuzz(array) {
