@@ -57,6 +57,9 @@ function hydrate(string) {
   // https://stackoverflow.com/questions/10003683/how-can-i-extract-a-number-from-a-string-in-javascript - comentário do "chineseducks"
   // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match
   // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+  // parseInt irá retornar um número ou 'Not a Number' (NaN). Se o numero for igual a 0 (false), não executa o código dentro do if. 
+  // Se o número for diferente de 0, o JavaScript considera esse valor true e executa o if.
+  // Se o argumento do parseInt for uma string que não seja um número, retorna false (NaN).
   let x = 0;
   let array = string.match(/\d+/g);
   for (let index = 0; index < array.length; index++) {
