@@ -72,7 +72,7 @@ function hydrate(string) {
   }
   return `${x} copos de água`;
 }
-console.log(hydrate("1 cerveja, 5 whisky, 1 agua"));
+// console.log(hydrate('1 cerveja, 5 whisky, 1 agua'));
 
 module.exports = {
   generatePhoneNumber,
