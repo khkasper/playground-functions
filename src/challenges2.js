@@ -4,7 +4,7 @@ function techList(arrayTech, name) {
   if (arrayTech.length === 0) { // Verificar se o array informado contém algo
     return 'Vazio!';
   }
-  let array = []; // Setar array para conter as informações
+  let array = []; // Variável para receber as informações
   for (let index in arrayTech) { // Irá acessar as chaves do array das "tecnologias"
     array.push({ // Inserir informações nesta chave
       tech: arrayTech[index], // Informações do array com as tecnologias informadas
@@ -17,17 +17,21 @@ function techList(arrayTech, name) {
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+  
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA > Math.abs(lineB + lineC) || lineB > Math.abs(lineA + lineC) || lineC > Math.abs(lineA + lineB) &&
+      lineA < Math.abs(lineB - lineC) || lineB < Math.abs(lineA - lineC) || lineC < Math.abs(lineA - lineB)) {
+    return false;
+  }
+  return true;
 }
 
 // Desafio 13
 function hydrate() {
-  // seu código aqui
+  
 }
 
 module.exports = {
