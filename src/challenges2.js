@@ -22,9 +22,9 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (Math.abs(lineA + lineB) <= lineC ||
-      Math.abs(lineA + lineC) <= lineB ||
-      Math.abs(lineB + lineC) <= lineA) {
+  if (Math.abs(lineA + lineB) <= lineC
+      || Math.abs(lineA + lineC) <= lineB
+      || Math.abs(lineB + lineC) <= lineA) {
     return false;
   }
   return true;
