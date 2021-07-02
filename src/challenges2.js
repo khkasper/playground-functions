@@ -42,9 +42,9 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (Math.abs(lineA + lineB) <= lineC
-      || Math.abs(lineA + lineC) <= lineB
-      || Math.abs(lineB + lineC) <= lineA) {
+  if (Math.abs(lineA + lineB) <= lineC ||
+    Math.abs(lineA + lineC) <= lineB ||
+    Math.abs(lineB + lineC) <= lineA) {
     return false;
   }
   return true;
@@ -52,9 +52,24 @@ function triangleCheck(lineA, lineB, lineC) {
 // console.log(triangleCheck(20, 6, 7));
 
 // Desafio 13
-function hydrate() {
-  // Z
+function hydrate(string) {
+  // https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994 - comentário do "cletus"
+  // https://stackoverflow.com/questions/10003683/how-can-i-extract-a-number-from-a-string-in-javascript - comentário do "chineseducks"
+  // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match
+  // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+  let x = 0;
+  let array = string.match(/\d+/g);
+  for (let index = 0; index < array.length; index++) {
+    if (parseInt(array[index]) > 0) {
+      x = x + parseInt(array[index]);
+    }
+  }
+  if (x === 1) {
+    return `${x} copo de água`;
+  }
+  return `${x} copos de água`;
 }
+console.log(hydrate("1 cerveja, 5 whisky, 1 agua"));
 
 module.exports = {
   generatePhoneNumber,
