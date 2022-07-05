@@ -11,7 +11,9 @@
 - Utilizar o comando for/in;
 - Utilizar funções para organizar e estruturar o seu código;
 
-## Requisitos do projeto
+# Requisitos do projeto
+
+## Obrigatórios
 
 - [x] 1 - Crie uma função usando o operador &&
 
@@ -33,7 +35,7 @@
 
 - [x] 10 - Crie uma função de Lista de Tecnologias
 
-**Bônus**
+## Bônus
 
 - [x] 11 - Crie uma função de Número de Telefone
 
