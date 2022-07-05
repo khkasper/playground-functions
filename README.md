@@ -11,11 +11,6 @@
 - Utilizar o comando for/in;
 - Utilizar funções para organizar e estruturar o seu código;
 
-## O que deverá ser desenvolvido
-
-- Você vai implementar funções a partir de requisitos;
-- Você vai desenvolver funções seguindo os requisitos especificados para o correto comportamento de cada uma delas.
-
 ## Requisitos do projeto
 
 - [x] 1 - Crie uma função usando o operador &&
